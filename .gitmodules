@@ -1,0 +1,4 @@
+[submodule "Packages/jp.keijiro.kvant.spray-mv"]
+	path = Packages/jp.keijiro.kvant.spray-mv
+	url = git@github.com:keijiro/KvantSprayMV.git
+	branch = upm
