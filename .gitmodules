@@ -6,3 +6,7 @@
 	path = Packages/jp.keijiro.klak.chromatics
 	url = git@github.com:keijiro/CosineGradient.git
 	branch = upm
+[submodule "Packages/jp.keijiro.kino.post-processing"]
+	path = Packages/jp.keijiro.kino.post-processing
+	url = git@github.com:keijiro/Kino.git
+	branch = upm
