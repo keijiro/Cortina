@@ -2,3 +2,7 @@
 	path = Packages/jp.keijiro.kvant.spray-mv
 	url = git@github.com:keijiro/KvantSprayMV.git
 	branch = upm
+[submodule "Packages/jp.keijiro.klak.chromatics"]
+	path = Packages/jp.keijiro.klak.chromatics
+	url = git@github.com:keijiro/CosineGradient.git
+	branch = upm
