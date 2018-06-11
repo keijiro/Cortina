@@ -4877,6 +4877,7 @@ GameObject:
   - component: {fileID: 1048007533}
   - component: {fileID: 1048007532}
   - component: {fileID: 1048007536}
+  - component: {fileID: 1048007537}
   - component: {fileID: 1048007535}
   - component: {fileID: 1048007534}
   m_Layer: 0
@@ -4964,6 +4965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd281aadc4bab742abf4b3229d71580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 1.3
   _shader: {fileID: 4800000, guid: 985aed104468f48439ec6a92f3441ac8, type: 3}
 --- !u!114 &1048007536
 MonoBehaviour:
@@ -5022,6 +5024,20 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1048007537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048007531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e9c834e81f73f4080f53f8ed46315b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enableInput: 1
+  _shader: {fileID: 4800000, guid: 20f9a31308b46b643a8da6bdda033903, type: 3}
+  _compute: {fileID: 7200000, guid: 09e0e4b83d57ad64ebbe1a2f5f0f65aa, type: 3}
 --- !u!1 &1083597063
 GameObject:
   m_ObjectHideFlags: 0
