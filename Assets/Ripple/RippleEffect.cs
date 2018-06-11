@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Cortina
 {
-    public class RippleEffect : MonoBehaviour
+    sealed class RippleEffect : MonoBehaviour
     {
         #region Public properties
 

@@ -3,19 +3,20 @@ using UnityEngine;
 namespace Cortina
 {
     [ExecuteInEditMode]
-    sealed public class RainRenderer : MonoBehaviour
+    public sealed class RainRenderer : MonoBehaviour
     {
+        #region Editable attributes
+
         [SerializeField] int _lineCount = 1000;
+
         [SerializeField] float _speed = 10;
         [SerializeField, Range(0, 1)] float _speedRandomness = 0.5f;
+
         [SerializeField] float _length = 1;
         [SerializeField, Range(0, 1)] float _lengthRandomness = 0.5f;
+
         [SerializeField] Vector3 _extent = Vector3.one * 10;
         [SerializeField, ColorUsage(false)] Color _color = Color.white;
-
-        [SerializeField, HideInInspector] Shader _shader;
-
-        Material _material;
 
         void OnValidate()
         {
@@ -25,54 +26,87 @@ namespace Cortina
             _extent = Vector3.Max(_extent, Vector3.zero);
         }
 
+        #endregion
+
+        #region Public properties
+
+        public int LineCount {
+            get { return _lineCount; }
+            set { _lineCount = Mathf.Max(value, 0); }
+        }
+
+        public float Length {
+            get { return _length; }
+            set { _length = Mathf.Max(value, 0); }
+        }
+
+        #endregion
+
+        #region Internal resources
+
+        [SerializeField, HideInInspector] Shader _shader;
+        Material _sheet;
+
+        #endregion
+
+        #region MonoBehaviour implementation
+
         void OnDestroy()
         {
-            if (_material != null)
+            if (_sheet != null)
             {
                 if (Application.isPlaying)
-                    Destroy(_material);
+                    Destroy(_sheet);
                 else
-                    DestroyImmediate(_material);
+                    DestroyImmediate(_sheet);
             }
         }
 
         void Update()
         {
-            if (_material == null)
+            // Lazy initialization
+            if (_sheet == null)
             {
-                _material = new Material(_shader);
-                _material.hideFlags = HideFlags.DontSave;
+                _sheet = new Material(_shader);
+                _sheet.hideFlags = HideFlags.DontSave;
             }
 
+            // Normalized speed parameter vector (min, max)
             var nspeed = new Vector2(1 - _speedRandomness, 1);
             nspeed *= _speed / (_extent.z * 2);
 
+            // Line length parameter vector (min, max)
             var length = new Vector2(1 - _lengthRandomness, 1) * _length;
 
-            _material.SetVector("_NSpeed", nspeed);
-            _material.SetVector("_Length", length);
-            _material.SetVector("_Extent", _extent);
-            _material.SetColor("_Color", _color);
-            _material.SetMatrix("_ObjectMatrix", transform.localToWorldMatrix);
+            // Local time. Pause while edit mode.
+            var time = Application.isPlaying ? Time.time + 10 : 10;
 
-            if (Application.isPlaying)
-                _material.SetFloat("_LocalTime", 10 + Time.time);
-            else
-                _material.SetFloat("_LocalTime", 10);
+            // Update the property sheet.
+            _sheet.SetVector("_NSpeed", nspeed);
+            _sheet.SetVector("_Length", length);
+            _sheet.SetVector("_Extent", _extent);
+            _sheet.SetColor("_Color", _color);
+            _sheet.SetFloat("_LocalTime", time);
+            _sheet.SetMatrix("_ObjectMatrix", transform.localToWorldMatrix);
         }
 
         void OnRenderObject()
         {
-            if (_material == null) return;
-            _material.SetPass(0);
+            if (_sheet == null) return;
+
+            // Pure procedural draw
+            _sheet.SetPass(0);
             Graphics.DrawProcedural(MeshTopology.Lines, _lineCount * 2, 1);
         }
 
         void OnDrawGizmos()
         {
+            // Show the extent with a yellow box.
             Gizmos.matrix = transform.localToWorldMatrix;
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireCube(Vector3.zero, _extent * 2);
         }
+
+        #endregion
     }
 }

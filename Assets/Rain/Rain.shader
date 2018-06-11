@@ -8,14 +8,14 @@ Shader "Hidden/Cortina/Rain"
     CGINCLUDE
 
     #include "UnityCG.cginc"
-    #include "Common.hlsl"
+    #include "Assets/Common/Shaders/Common.hlsl"
 
     half2 _NSpeed; // speed / (extent.z * 2)
     half2 _Length;
     half3 _Extent;
     half4 _Color;
-    float4x4 _ObjectMatrix;
     float _LocalTime;
+    float4x4 _ObjectMatrix;
 
     struct Varyings
     {
@@ -65,7 +65,6 @@ Shader "Hidden/Cortina/Rain"
             #pragma vertex Vertex
             #pragma fragment Fragment
             #pragma multi_compile_fog
-            #pragma multi_compile _ UNITY_COLORSPACE_GAMMA
             ENDCG
         }
     }

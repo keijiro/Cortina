@@ -2,7 +2,7 @@
 
 namespace Cortina
 {
-    public class BlotEffect : MonoBehaviour
+    sealed class BlotEffect : MonoBehaviour
     {
         #region Public properties
 
