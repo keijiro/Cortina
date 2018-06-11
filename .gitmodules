@@ -10,3 +10,7 @@
 	path = Packages/jp.keijiro.kino.post-processing
 	url = git@github.com:keijiro/Kino.git
 	branch = upm
+[submodule "Packages/jp.keijiro.klak.sensel"]
+	path = Packages/jp.keijiro.klak.sensel
+	url = git@github.com:keijiro/SenselExamples.git
+	branch = upm
