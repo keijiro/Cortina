@@ -6,49 +6,78 @@ namespace Cortina
     [ExecuteInEditMode]
     public class MasterEffect : MonoBehaviour
     {
-        [SerializeField, Range(0, 0.5f)] float _leftMargin;
-        [SerializeField, Range(0, 0.5f)] float _rightMargin;
-        [SerializeField, Range(0, 0.5f)] float _topMargin;
-        [SerializeField, Range(0, 0.5f)] float _bottomMargin;
+        #region Editable attributes
 
+        enum Mode { Color, Gradient, Dynamic }
+
+        [Space]
+        [SerializeField] Mode _mode;
+        [SerializeField] Color _color;
         [SerializeField] CosineGradient _gradient;
+        [Space]
+        [SerializeField, Range(0.001f, 1)] float _fadeWidth = 0.1f;
+        [SerializeField, Range(0, 1)] float _leftMargin;
+        [SerializeField, Range(0, 1)] float _rightMargin;
+        [SerializeField, Range(0, 1)] float _topMargin;
+        [SerializeField, Range(0, 1)] float _bottomMargin;
+
+        #endregion
+
+        #region Editable attributes
 
         [SerializeField, HideInInspector] Shader _shader;
+        Material _sheet;
 
-        Material _material;
+        #endregion
+
+        #region MonoBehaviour implementation
 
         void OnDestroy()
         {
-            if (_material != null)
+            if (_sheet != null)
             {
                 if (Application.isPlaying)
-                    Destroy(_material);
+                    Destroy(_sheet);
                 else
-                    DestroyImmediate(_material);
+                    DestroyImmediate(_sheet);
             }
         }
 
         void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
-            if (_material == null)
+            // Lazy initialization
+            if (_sheet == null)
             {
-                _material = new Material(_shader);
-                _material.hideFlags = HideFlags.DontSave;
+                _sheet = new Material(_shader);
+                _sheet.hideFlags = HideFlags.DontSave;
             }
 
-            _material.SetVector("_Margin", new Vector4(
-                _leftMargin, _bottomMargin, _rightMargin, _topMargin
-            ));
+            // Update trimming parameters.
+            var vfade = new Vector2(_fadeWidth / 2, 2 / _fadeWidth);
+            _sheet.SetVector("_Fade", vfade);
 
-            if (_gradient != null)
+            var vmargin = new Vector4(_leftMargin, _bottomMargin, _rightMargin, _topMargin);
+            _sheet.SetVector("_Margin", vmargin / 2);
+
+            if (_mode == Mode.Color)
             {
-                _material.SetVector("_CoeffsA", _gradient.coeffsA);
-                _material.SetVector("_CoeffsB", _gradient.coeffsB);
-                _material.SetVector("_CoeffsC", _gradient.coeffsC2);
-                _material.SetVector("_CoeffsD", _gradient.coeffsD2);
+                _sheet.SetColor("_Color", _color);
+                Graphics.Blit(source, destination, _sheet, 0);
             }
-
-            Graphics.Blit(source, destination, _material, 0);
+            else if (_mode == Mode.Gradient)
+            {
+                _sheet.SetVector("_CoeffsA", _gradient.coeffsA);
+                _sheet.SetVector("_CoeffsB", _gradient.coeffsB);
+                _sheet.SetVector("_CoeffsC", _gradient.coeffsC2);
+                _sheet.SetVector("_CoeffsD", _gradient.coeffsD2);
+                Graphics.Blit(source, destination, _sheet, 1);
+            }
+            else // _mode == Mode.Dynamic
+            {
+                Graphics.Blit(source, destination, _sheet, 2);
+            }
         }
+
+        #endregion
     }
 } 

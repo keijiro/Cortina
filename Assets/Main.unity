@@ -5201,11 +5201,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftMargin: 0.1
-  _rightMargin: 0.1
-  _topMargin: 0.1
-  _bottomMargin: 0.1
+  _mode: 0
+  _color: {r: 1, g: 0, b: 0, a: 0}
   _gradient: {fileID: 11400000, guid: d291a4a334ca014469250200ce3a4e40, type: 2}
+  _fadeWidth: 0.12
+  _leftMargin: 0
+  _rightMargin: 0
+  _topMargin: 0
+  _bottomMargin: 0
   _shader: {fileID: 4800000, guid: 0e5e463be775f1c43bd92c3fce5e3eed, type: 3}
 --- !u!114 &1048007535
 MonoBehaviour:
@@ -5284,7 +5287,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048007531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e9c834e81f73f4080f53f8ed46315b, type: 3}
   m_Name: 

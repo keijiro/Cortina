@@ -3,7 +3,7 @@ Shader "Hidden/Cortina/Master"
     Properties
     {
         _MainTex("", 2D) = ""{}
-        _Margin("", Vector) = (0.1, 0.1, 0.1, 0.1)
+        _Color("", Color) = (0, 0, 0, 0)
     }
 
     CGINCLUDE
@@ -14,8 +14,10 @@ Shader "Hidden/Cortina/Master"
     sampler2D _MainTex;
     float4 _MainTex_TexelSize;
 
+    half2 _Fade; // fade_width/2, 2/fade_width
     half4 _Margin;
 
+    half3 _Color;
     half3 _CoeffsA;
     half3 _CoeffsB;
     half3 _CoeffsC;
@@ -28,17 +30,46 @@ Shader "Hidden/Cortina/Master"
         return rgb;
     }
 
-    half4 frag_master(v2f_img i) : SV_Target
+    half3 DynamicPalette(half p)
     {
-        half4 c = tex2D(_MainTex, i.uv);
-        float2 p = i.uv - 0.5;
-        p.x *= _MainTex_TexelSize.y * _MainTex_TexelSize.z;
-        p *= 1.2;
-//        c.rgb = CosineGradient(snoise(float3(p, 1))) * smoothstep(0, 0.001, Luminance(c.rgb));
-        half4 pos = float4(i.uv.xy, 1 - i.uv.xy);
-        half4 amp = smoothstep(0, _Margin, pos);
-        c.rgb *= GammaToLinearSpace(min(min(min(amp.x, amp.y), amp.z), amp.w));
-        return c;
+        float3 x = p * float3(7.73, 9.31, 8.11);
+        x += _Time.y * float3(2.31, 3.78, 2.54);
+        return sin(x) * 0.5 + 0.5;
+    }
+
+    half Mask(float2 uv)
+    {
+        const half     aspect = _MainTex_TexelSize.x * _MainTex_TexelSize.w;
+        const half inv_aspect = _MainTex_TexelSize.y * _MainTex_TexelSize.z;
+
+        uv += (uv.xy < 0.5) ? -_Margin.xy : _Margin.zw;
+
+        half2 pos = abs(uv - 0.5);
+        pos.x = (pos.x + 0.5 * (aspect - 1)) * inv_aspect;
+        pos = saturate(pos - 0.5 + _Fade.x);
+
+        half l = saturate(1 - _Fade.y * length(pos));
+        return GammaToLinearSpace(smoothstep(0, 1, l));
+    }
+
+    half4 FragmentColor(v2f_img i) : SV_Target
+    {
+        half src = tex2D(_MainTex, i.uv).r;
+        return half4(_Color.rgb * src * Mask(i.uv), src);
+    }
+
+    half4 FragmentGradient(v2f_img i) : SV_Target
+    {
+        half src = tex2D(_MainTex, i.uv).r;
+        half mask = smoothstep(0.05, 0.2, src) * Mask(i.uv);
+        return half4(CosineGradient(src) * mask, src);
+    }
+
+    half4 FragmentDynamic(v2f_img i) : SV_Target
+    {
+        half src = tex2D(_MainTex, i.uv).r;
+        half mask = smoothstep(0.05, 0.2, src) * Mask(i.uv);
+        return half4(DynamicPalette(src) * mask, src);
     }
 
     ENDCG
@@ -50,7 +81,21 @@ Shader "Hidden/Cortina/Master"
         {
             CGPROGRAM
             #pragma vertex vert_img
-            #pragma fragment frag_master
+            #pragma fragment FragmentColor
+            ENDCG
+        }
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert_img
+            #pragma fragment FragmentGradient
+            ENDCG
+        }
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert_img
+            #pragma fragment FragmentDynamic
             ENDCG
         }
     }
