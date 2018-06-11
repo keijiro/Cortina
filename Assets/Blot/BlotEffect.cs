@@ -39,8 +39,8 @@ namespace Cortina
             _forceMap = new Klak.Sensel.ForceMap();
             _sheet = new Material(_shader);
             _state = new ComputeBuffer(2, sizeof(float));
-            _rt1 = new RenderTexture(1920, 640, 0, RenderTextureFormat.ARGBHalf);
-            _rt2 = new RenderTexture(1920, 640, 0, RenderTextureFormat.ARGBHalf);
+            _rt1 = new RenderTexture(1920, 640, 0, RenderTextureFormat.RHalf);
+            _rt2 = new RenderTexture(1920, 640, 0, RenderTextureFormat.RHalf);
         }
 
         void OnDestroy()

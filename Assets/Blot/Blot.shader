@@ -29,7 +29,7 @@
         uv.x += snoise(float3(uv_n, t_n - 11)) * amp_n * aspect;
         uv.y += snoise(float3(t_n + 13, uv_n)) * amp_n;
 
-        half p0 = tex2D(_MainTex, uv).a * 0.99;
+        half p0 = tex2D(_MainTex, uv).r * 0.99;
         half p1 = saturate(tex2D(_InputTex, input.uv).r * 2);
 
         return max(p0, p1);
