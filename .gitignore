@@ -17,3 +17,5 @@ xcshareddata
 # Unity
 /Library
 /Temp
+
+/Assets/Logo/Private/*.png
