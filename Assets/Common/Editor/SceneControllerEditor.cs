@@ -7,55 +7,63 @@ namespace Cortina
     [CustomEditor(typeof(SceneController))]
     sealed class SceneControllerEditor : Editor
     {
-        ReorderableList _activators;
+        ReorderableList _effectActivators;
+        ReorderableList _optionActivators;
 
-        static class Styles
+        void DrawActivatorElement(Rect frame, SerializedProperty prop)
         {
-            public static readonly GUIContent Line = new GUIContent("Line");
+            var rect = frame;
+            rect.y += 2;
+            rect.height = EditorGUIUtility.singleLineHeight;
+
+            rect.width = (frame.width - 96) / 2;
+            EditorGUI.PropertyField(rect, prop.FindPropertyRelative("Intro"), GUIContent.none);
+
+            rect.x += rect.width + 8;
+            EditorGUI.PropertyField(rect, prop.FindPropertyRelative("Outro"), GUIContent.none);
+
+            rect.x = frame.x + frame.width - 80;
+            rect.width = 80;
+            EditorGUI.PropertyField(rect, prop.FindPropertyRelative("Key"), GUIContent.none);
         }
 
         void OnEnable()
         {
-            _activators = new ReorderableList(
-                serializedObject,
-                serializedObject.FindProperty("_activators"),
-                true, // draggable
-                true, // displayHeader
-                true, // displayAddButton
-                true  // displayRemoveButton
+            _effectActivators = new ReorderableList(
+                serializedObject, serializedObject.FindProperty("_effectActivators"),
+                true, true, true, true
             );
 
-            _activators.drawHeaderCallback = (Rect rect) => {  
-                EditorGUI.LabelField(rect, "Activators");
+            _optionActivators = new ReorderableList(
+                serializedObject, serializedObject.FindProperty("_optionActivators"),
+                true, true, true, true
+            );
+
+            _effectActivators.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, "Effects");
+            }; 
+
+            _optionActivators.drawHeaderCallback = (Rect rect) => {
+                EditorGUI.LabelField(rect, "Options");
+            }; 
+
+            _effectActivators.drawElementCallback = (Rect frame, int index, bool isActive, bool isFocused) => {
+                DrawActivatorElement(frame, _effectActivators.serializedProperty.GetArrayElementAtIndex(index));
             };
 
-            _activators.drawElementCallback = (Rect frame, int index, bool isActive, bool isFocused) => {
-                var activator = _activators.serializedProperty.GetArrayElementAtIndex(index);
-
-                var rect = frame;
-                rect.y += 2;
-                rect.height = EditorGUIUtility.singleLineHeight;
-
-                rect.width = (frame.width - 96) / 2;
-                EditorGUI.PropertyField(rect, activator.FindPropertyRelative("Intro"), GUIContent.none);
-
-                rect.x += rect.width + 8;
-                EditorGUI.PropertyField(rect, activator.FindPropertyRelative("Outro"), GUIContent.none);
-
-                rect.x = frame.x + frame.width - 80;
-                rect.width = 80;
-                EditorGUI.PropertyField(rect, activator.FindPropertyRelative("Key"), GUIContent.none);
+            _optionActivators.drawElementCallback = (Rect frame, int index, bool isActive, bool isFocused) => {
+                DrawActivatorElement(frame, _optionActivators.serializedProperty.GetArrayElementAtIndex(index));
             };
         }
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-
             EditorGUILayout.Space();
-            _activators.DoLayoutList();
+            _effectActivators.DoLayoutList();
             EditorGUILayout.Space();
-
+            _optionActivators.DoLayoutList();
+            EditorGUILayout.Space();
             serializedObject.ApplyModifiedProperties();
         }
     }

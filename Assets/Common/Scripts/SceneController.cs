@@ -6,40 +6,48 @@ namespace Cortina
     public sealed class SceneController : MonoBehaviour
     {
         [System.Serializable]
-        struct Activator
+        public struct Activator
         {
             public PlayableDirector Intro;
             public PlayableDirector Outro;
             public KeyCode Key;
         }
 
-        [SerializeField] Activator[] _activators;
+        [SerializeField] Activator[] _effectActivators;
+        [SerializeField] Activator[] _optionActivators;
 
-        int _mode = -1;
+        int _currentEffect = -1;
+        int _currentOption = -1;
 
         void Update()
         {
-            var input = GetActivatorKey();
-            if (input < 0 || input == _mode) return;
-
-            if (_mode >= 0)
-            {
-                var acOld = _activators[_mode];
-                acOld.Intro.Stop();
-                acOld.Outro.Play();
-            }
-
-            _mode = input;
-
-            var acNew = _activators[_mode];
-            acNew.Outro.Stop();
-            acNew.Intro.Play();
+            _currentEffect = ProcessInputWithActivators(_effectActivators, _currentEffect);
+            _currentOption = ProcessInputWithActivators(_optionActivators, _currentOption);
         }
 
-        int GetActivatorKey()
+        int ProcessInputWithActivators(Activator[] activators, int current)
         {
-            for (var i = 0; i < _activators.Length; i++)
-                if (Input.GetKeyDown(_activators[i].Key)) return i;
+            var input = GetActivatorKey(activators);
+            if (input < 0 || input == current) return current;
+
+            if (current >= 0)
+            {
+                var prev = activators[current];
+                prev.Intro.Stop();
+                prev.Outro.Play();
+            }
+
+            var next = activators[input];
+            next.Outro.Stop();
+            next.Intro.Play();
+
+            return input;
+        }
+
+        int GetActivatorKey(Activator[] activators)
+        {
+            for (var i = 0; i < activators.Length; i++)
+                if (Input.GetKeyDown(activators[i].Key)) return i;
             return -1;
         }
     }
