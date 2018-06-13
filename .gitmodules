@@ -14,3 +14,7 @@
 	path = Packages/jp.keijiro.klak.sensel
 	url = git@github.com:keijiro/SenselExamples.git
 	branch = upm
+[submodule "Packages/jp.keijiro.testcards"]
+	path = Packages/jp.keijiro.testcards
+	url = git@github.com:keijiro/TestCards.git
+	branch = upm

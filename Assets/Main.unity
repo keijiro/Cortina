@@ -5589,6 +5589,7 @@ GameObject:
   - component: {fileID: 1048007535}
   - component: {fileID: 1048007538}
   - component: {fileID: 1048007534}
+  - component: {fileID: 1048007540}
   - component: {fileID: 1048007539}
   m_Layer: 0
   m_Name: Main Camera
@@ -5785,6 +5786,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1048007540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048007531}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e531f25570e604d8fb78aee77125a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mode: 3
+  _color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _scale: 4
+  _shader: {fileID: 4800000, guid: bc6a0edaa182a35449d12a1445ba38db, type: 3}
 --- !u!1 &1078459011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,7 +5995,7 @@ Transform:
   m_GameObject: {fileID: 1141841125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 3.5555556, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1432411358}
   m_RootOrder: 0
@@ -6129,7 +6145,7 @@ Camera:
   far clip plane: 2
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 0.84375
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
