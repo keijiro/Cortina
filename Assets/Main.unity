@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.1
@@ -4912,7 +4912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &497357568
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5132,6 +5132,7 @@ GameObject:
   - component: {fileID: 1048007536}
   - component: {fileID: 1048007537}
   - component: {fileID: 1048007535}
+  - component: {fileID: 1048007538}
   - component: {fileID: 1048007534}
   m_Layer: 0
   m_Name: Main Camera
@@ -5287,7 +5288,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048007531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e9c834e81f73f4080f53f8ed46315b, type: 3}
   m_Name: 
@@ -5295,6 +5296,21 @@ MonoBehaviour:
   _enableInput: 1
   _shader: {fileID: 4800000, guid: 20f9a31308b46b643a8da6bdda033903, type: 3}
   _compute: {fileID: 7200000, guid: 09e0e4b83d57ad64ebbe1a2f5f0f65aa, type: 3}
+--- !u!114 &1048007538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048007531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edc5651636a57d4b946b5459b33df24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distortion: 0.02
+  _feedback: 1
+  _hold: 1
+  _shader: {fileID: 4800000, guid: e2e14b8c9f3b92d47a6de0f0ab0bd79b, type: 3}
 --- !u!1 &1078459011
 GameObject:
   m_ObjectHideFlags: 0
