@@ -5514,7 +5514,7 @@ GameObject:
   - component: {fileID: 1001033555}
   - component: {fileID: 1001033554}
   m_Layer: 0
-  m_Name: Scene Controller
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5573,7 +5573,7 @@ Transform:
   - {fileID: 1498975267}
   - {fileID: 1920459558}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048007531
 GameObject:
@@ -5584,13 +5584,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1048007533}
   - component: {fileID: 1048007532}
+  - component: {fileID: 1048007539}
   - component: {fileID: 1048007536}
   - component: {fileID: 1048007537}
   - component: {fileID: 1048007535}
   - component: {fileID: 1048007538}
   - component: {fileID: 1048007534}
   - component: {fileID: 1048007540}
-  - component: {fileID: 1048007539}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6173,7 +6173,7 @@ Transform:
   m_Children:
   - {fileID: 1141841126}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1463616443
 GameObject:

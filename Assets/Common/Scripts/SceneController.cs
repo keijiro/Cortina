@@ -3,7 +3,7 @@ using UnityEngine.Playables;
 
 namespace Cortina
 {
-    class SceneController : MonoBehaviour
+    public sealed class SceneController : MonoBehaviour
     {
         [System.Serializable]
         struct Activator
@@ -15,25 +15,32 @@ namespace Cortina
 
         [SerializeField] Activator[] _activators;
 
-        bool[] _flags;
-
-        void Start()
-        {
-            _flags = new bool[_activators.Length];
-        }
+        int _mode = -1;
 
         void Update()
         {
-            for (var i = 0; i < _activators.Length; i++)
+            var input = GetActivatorKey();
+            if (input < 0 || input == _mode) return;
+
+            if (_mode >= 0)
             {
-                var ac = _activators[i];
-                if (Input.GetKeyDown(ac.Key))
-                {
-                    _flags[i] = !_flags[i];
-                    (_flags[i] ? ac.Outro : ac.Intro).Stop();
-                    (_flags[i] ? ac.Intro : ac.Outro).Play();
-                }
+                var acOld = _activators[_mode];
+                acOld.Intro.Stop();
+                acOld.Outro.Play();
             }
+
+            _mode = input;
+
+            var acNew = _activators[_mode];
+            acNew.Outro.Stop();
+            acNew.Intro.Play();
+        }
+
+        int GetActivatorKey()
+        {
+            for (var i = 0; i < _activators.Length; i++)
+                if (Input.GetKeyDown(_activators[i].Key)) return i;
+            return -1;
         }
     }
 }

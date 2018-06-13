@@ -94,6 +94,11 @@ namespace Cortina
         {
             if (_sheet == null) return;
 
+            // Check the camera condition.
+            var camera = Camera.current;
+            if ((camera.cullingMask & (1 << gameObject.layer)) == 0) return;
+            if (camera.name == "Preview Scene Camera") return;
+
             // Pure procedural draw
             _sheet.SetPass(0);
             Graphics.DrawProcedural(MeshTopology.Lines, _lineCount * 2, 1);
