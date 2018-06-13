@@ -18,3 +18,7 @@
 	path = Packages/jp.keijiro.testcards
 	url = git@github.com:keijiro/TestCards.git
 	branch = upm
+[submodule "Packages/jp.keijiro.kvant.swarm-mv"]
+	path = Packages/jp.keijiro.kvant.swarm-mv
+	url = git@github.com:keijiro/KvantSwarmMV.git
+	branch = upm
