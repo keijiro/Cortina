@@ -54,8 +54,8 @@ Shader "Hidden/Cortina/Master"
 
     half4 FragmentColor(v2f_img i) : SV_Target
     {
-        half src = tex2D(_MainTex, i.uv).r;
-        return half4(_Color.rgb * src * Mask(i.uv), src);
+        half4 src = tex2D(_MainTex, i.uv);
+        return half4(_Color.rgb * src.rgb * Mask(i.uv), src.a);
     }
 
     half4 FragmentGradient(v2f_img i) : SV_Target

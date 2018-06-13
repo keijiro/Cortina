@@ -33,13 +33,13 @@ namespace Cortina
             if (current >= 0)
             {
                 var prev = activators[current];
-                prev.Intro.Stop();
-                prev.Outro.Play();
+                if (prev.Intro != null) prev.Intro.Stop();
+                if (prev.Outro != null) prev.Outro.Play();
             }
 
             var next = activators[input];
-            next.Outro.Stop();
-            next.Intro.Play();
+            if (next.Outro != null) next.Outro.Stop();
+            if (next.Intro != null) next.Intro.Play();
 
             return input;
         }
