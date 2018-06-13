@@ -7,6 +7,7 @@ namespace Cortina
     {
         #region Editable attributes
 
+        [SerializeField] float _throttle = 100;
         [SerializeField] float _extent = 5;
         [SerializeField] ParticleSystem _template;
 
@@ -79,7 +80,8 @@ namespace Cortina
         void SwitchEmission(ParticleSystem instance, bool enable)
         {
             var emission = instance.emission;
-            emission.enabled = enable;
+            //emission.enabled = enable;
+            emission.rateOverDistanceMultiplier = _throttle * (enable ? 1 : 0);
         }
 
         #endregion

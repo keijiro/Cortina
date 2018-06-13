@@ -7,6 +7,7 @@ namespace Cortina
     {
         #region Editable attributes
 
+        [SerializeField, Range(0, 1)] float _throttle = 1;
         [SerializeField] float _extent = 5;
         [SerializeField] Kvant.SprayMV[] _targets;
 
@@ -64,7 +65,7 @@ namespace Cortina
             var input = new Vector2(contact.X, contact.Y);
             var aspect = new Vector2(1, 640.0f / 1920);
             target.emitterCenter = (input * 2 - Vector2.one) * _extent * aspect;
-            target.throttle = Mathf.Clamp01(contact.Force * 10);
+            target.throttle = Mathf.Clamp01(contact.Force * 10) * _throttle;
         }
 
         #endregion
