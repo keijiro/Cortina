@@ -22,13 +22,13 @@
         float3 np = float3(input.uv * float2(aspect, 1) * 5, _Time.y * 0.75);
         float2 nf = snoise_grad(np).xy * _Distortion;
         float2 delta = cross(float3(nf, 0), float3(0, 0, 1));
-        float src = tex2D(_MainTex, input.uv + delta * float2(aspect, 1)).r;
+        float4 src = tex2D(_MainTex, input.uv + delta * float2(aspect, 1));
         return src * _Feedback;
     }
 
     half4 FragmentBlit(v2f_img input) : SV_Target
     {
-        return tex2D(_MainTex, input.uv).r;
+        return tex2D(_MainTex, input.uv);
     }
 
     ENDCG

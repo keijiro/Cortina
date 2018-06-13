@@ -48,8 +48,8 @@ namespace Cortina
         void Start()
         {
             _sheet = new Material(_shader);
-            _rt1 = new RenderTexture(1920, 640, 0, RenderTextureFormat.RHalf);
-            _rt2 = new RenderTexture(1920, 640, 0, RenderTextureFormat.RHalf);
+            _rt1 = new RenderTexture(1920, 640, 0, RenderTextureFormat.ARGBHalf);
+            _rt2 = new RenderTexture(1920, 640, 0, RenderTextureFormat.ARGBHalf);
         }
 
         void OnDestroy()

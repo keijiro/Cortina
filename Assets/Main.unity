@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 112887748}
   - component: {fileID: 112887750}
   - component: {fileID: 112887749}
+  - component: {fileID: 112887751}
   m_Layer: 0
   m_Name: Main Logo 3
   m_TagString: Untagged
@@ -248,6 +249,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112887747}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &112887751
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112887747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &122552596
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +277,7 @@ GameObject:
   - component: {fileID: 122552597}
   - component: {fileID: 122552599}
   - component: {fileID: 122552598}
+  - component: {fileID: 122552600}
   m_Layer: 0
   m_Name: Team 2 Emblem
   m_TagString: Untagged
@@ -320,6 +340,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122552596}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &122552600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122552596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &128403674
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +535,7 @@ GameObject:
   - component: {fileID: 162364114}
   - component: {fileID: 162364116}
   - component: {fileID: 162364115}
+  - component: {fileID: 162364117}
   m_Layer: 0
   m_Name: Team 1 Logo
   m_TagString: Untagged
@@ -559,6 +598,75 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 162364113}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &162364117
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162364113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &188465351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 188465352}
+  - component: {fileID: 188465353}
+  m_Layer: 0
+  m_Name: Team 1 Title In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &188465352
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188465351}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &188465353
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188465351}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1881461020}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1881461020}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &239266658
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +724,57 @@ Transform:
   m_Father: {fileID: 1371418219}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &257115152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 257115153}
+  - component: {fileID: 257115154}
+  m_Layer: 0
+  m_Name: Team 2 Emblem In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257115153
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 257115152}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &257115154
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 257115152}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 122552596}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 122552596}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &288976876
 GameObject:
   m_ObjectHideFlags: 0
@@ -5358,6 +5517,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49034b10701f61c4db02139f27ade1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &348897768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 348897769}
+  - component: {fileID: 348897770}
+  m_Layer: 0
+  m_Name: Team 1 Title Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348897769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 348897768}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &348897770
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 348897768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1881461020}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &419849504
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5613,55 @@ Transform:
   m_Father: {fileID: 1750560199}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &492453595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 492453597}
+  - component: {fileID: 492453596}
+  m_Layer: 0
+  m_Name: Main Logo 1 Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &492453596
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492453595}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 497357567}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &492453597
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492453595}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &497357567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,6 +5672,7 @@ GameObject:
   - component: {fileID: 497357570}
   - component: {fileID: 497357569}
   - component: {fileID: 497357568}
+  - component: {fileID: 497357571}
   m_Layer: 0
   m_Name: Main Logo 1
   m_TagString: Untagged
@@ -5476,6 +5734,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1919991229}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &497357571
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497357567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &798834054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 798834056}
+  - component: {fileID: 798834055}
+  m_Layer: 0
+  m_Name: Team 2 Title Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &798834055
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798834054}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 953693468}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &798834056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798834054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824961095
 GameObject:
@@ -5640,6 +5965,55 @@ Transform:
   m_Father: {fileID: 953080630}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &876273296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 876273297}
+  - component: {fileID: 876273298}
+  m_Layer: 0
+  m_Name: Team 2 Emblem Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876273297
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876273296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &876273298
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876273296}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 122552596}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &895163048
 GameObject:
   m_ObjectHideFlags: 0
@@ -5684,6 +6058,55 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 114012137560494316, guid: 240dc208e20f38947b58df49b2394533, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &914334063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 914334064}
+  - component: {fileID: 914334065}
+  m_Layer: 0
+  m_Name: Team 1 Emblem Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &914334064
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914334063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &914334065
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914334063}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1896578647}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
     value: {fileID: 1048007531}
   m_ExposedReferences:
     m_References: []
@@ -5734,6 +6157,52 @@ PlayableDirector:
     value: {fileID: 1048007531}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &945458790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 945458791}
+  m_Layer: 0
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &945458791
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945458790}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1274508579}
+  - {fileID: 492453597}
+  - {fileID: 1792899027}
+  - {fileID: 1605475367}
+  - {fileID: 1446836087}
+  - {fileID: 1102328401}
+  - {fileID: 1662481056}
+  - {fileID: 914334064}
+  - {fileID: 2087840649}
+  - {fileID: 1771520367}
+  - {fileID: 188465352}
+  - {fileID: 348897769}
+  - {fileID: 257115153}
+  - {fileID: 876273297}
+  - {fileID: 1921887307}
+  - {fileID: 1652502422}
+  - {fileID: 1063294554}
+  - {fileID: 798834056}
+  m_Father: {fileID: 1001033555}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953080628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,6 +6279,7 @@ GameObject:
   - component: {fileID: 953693469}
   - component: {fileID: 953693471}
   - component: {fileID: 953693470}
+  - component: {fileID: 953693472}
   m_Layer: 0
   m_Name: Team 2 Title
   m_TagString: Untagged
@@ -5872,6 +6342,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953693468}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &953693472
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953693468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &979966695
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,6 +6467,33 @@ MonoBehaviour:
   - Intro: {fileID: 979966696}
     Outro: {fileID: 824961096}
     Key: 100
+  - Intro: {fileID: 1274508580}
+    Outro: {fileID: 492453596}
+    Key: 113
+  - Intro: {fileID: 1792899028}
+    Outro: {fileID: 1605475368}
+    Key: 119
+  - Intro: {fileID: 1446836088}
+    Outro: {fileID: 1102328400}
+    Key: 101
+  - Intro: {fileID: 1662481057}
+    Outro: {fileID: 914334065}
+    Key: 114
+  - Intro: {fileID: 2087840650}
+    Outro: {fileID: 1771520368}
+    Key: 116
+  - Intro: {fileID: 188465353}
+    Outro: {fileID: 348897770}
+    Key: 121
+  - Intro: {fileID: 257115154}
+    Outro: {fileID: 876273298}
+    Key: 117
+  - Intro: {fileID: 1921887308}
+    Outro: {fileID: 1652502423}
+    Key: 105
+  - Intro: {fileID: 1063294555}
+    Outro: {fileID: 798834055}
+    Key: 111
   _optionActivators:
   - Intro: {fileID: 1121071067}
     Outro: {fileID: 0}
@@ -6004,6 +6519,7 @@ Transform:
   m_Children:
   - {fileID: 1371418219}
   - {fileID: 1750560199}
+  - {fileID: 945458791}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6233,6 +6749,57 @@ MonoBehaviour:
   _color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _scale: 4
   _shader: {fileID: 4800000, guid: bc6a0edaa182a35449d12a1445ba38db, type: 3}
+--- !u!1 &1063294553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1063294554}
+  - component: {fileID: 1063294555}
+  m_Layer: 0
+  m_Name: Team 2 Title In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063294554
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063294553}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1063294555
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063294553}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 953693468}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 953693468}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1078459011
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,6 +6969,55 @@ Transform:
   m_Father: {fileID: 1846317246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1102328399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1102328401}
+  - component: {fileID: 1102328400}
+  m_Layer: 0
+  m_Name: Main Logo 3 Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1102328400
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102328399}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 112887747}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1102328401
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1102328399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121071065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,6 +7139,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141841125}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1274508578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1274508579}
+  - component: {fileID: 1274508580}
+  m_Layer: 0
+  m_Name: Main Logo 1 In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274508579
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274508578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1274508580
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274508578}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 497357567}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 497357567}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1288843387
 GameObject:
   m_ObjectHideFlags: 0
@@ -6600,6 +7267,7 @@ GameObject:
   - component: {fileID: 1346378298}
   - component: {fileID: 1346378300}
   - component: {fileID: 1346378299}
+  - component: {fileID: 1346378301}
   m_Layer: 0
   m_Name: Main Logo 2
   m_TagString: Untagged
@@ -6662,6 +7330,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1346378297}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1346378301
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346378297}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1350896504
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,6 +7358,7 @@ GameObject:
   - component: {fileID: 1350896505}
   - component: {fileID: 1350896507}
   - component: {fileID: 1350896506}
+  - component: {fileID: 1350896508}
   m_Layer: 0
   m_Name: Team 2 Logo
   m_TagString: Untagged
@@ -6734,6 +7421,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1350896504}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1350896508
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350896504}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1371418218
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +7545,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1446836086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1446836087}
+  - component: {fileID: 1446836088}
+  m_Layer: 0
+  m_Name: Main Logo 3 In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1446836087
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446836086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1446836088
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1446836086}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 112887747}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 112887747}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1463616443
 GameObject:
   m_ObjectHideFlags: 0
@@ -6974,6 +7730,155 @@ Transform:
   m_Father: {fileID: 1371418219}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1605475366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1605475367}
+  - component: {fileID: 1605475368}
+  m_Layer: 0
+  m_Name: Main Logo 2 Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1605475367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605475366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1605475368
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605475366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1346378297}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &1652502421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1652502422}
+  - component: {fileID: 1652502423}
+  m_Layer: 0
+  m_Name: Team 2 Logo Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652502422
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652502421}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1652502423
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652502421}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1350896504}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &1662481055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1662481056}
+  - component: {fileID: 1662481057}
+  m_Layer: 0
+  m_Name: Team 1 Emblem In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1662481056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1662481055}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1662481057
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1662481055}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1896578647}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1896578647}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1673938290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7051,6 +7956,106 @@ Transform:
   m_Father: {fileID: 1001033555}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1771520366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1771520367}
+  - component: {fileID: 1771520368}
+  m_Layer: 0
+  m_Name: Team 1 Logo Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771520367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771520366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1771520368
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771520366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114327545515235014, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 162364113}
+  - key: {fileID: 114200831058871832, guid: e4713c1c3b5dca04d9049f87377b0237, type: 2}
+    value: {fileID: 1048007531}
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &1792899026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1792899027}
+  - component: {fileID: 1792899028}
+  m_Layer: 0
+  m_Name: Main Logo 2 In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1792899027
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1792899026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1792899028
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1792899026}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1346378297}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1346378297}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1846317244
 GameObject:
   m_ObjectHideFlags: 0
@@ -7127,6 +8132,7 @@ GameObject:
   - component: {fileID: 1881461021}
   - component: {fileID: 1881461023}
   - component: {fileID: 1881461022}
+  - component: {fileID: 1881461024}
   m_Layer: 0
   m_Name: Team 1 Title
   m_TagString: Untagged
@@ -7189,6 +8195,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1881461020}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1881461024
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881461020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1896578647
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,6 +8223,7 @@ GameObject:
   - component: {fileID: 1896578648}
   - component: {fileID: 1896578650}
   - component: {fileID: 1896578649}
+  - component: {fileID: 1896578651}
   m_Layer: 0
   m_Name: Team 1 Emblem
   m_TagString: Untagged
@@ -7261,6 +8286,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1896578647}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1896578651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896578647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1919991228
 GameObject:
   m_ObjectHideFlags: 0
@@ -7363,6 +8406,57 @@ Transform:
   m_Father: {fileID: 1371418219}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1921887306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1921887307}
+  - component: {fileID: 1921887308}
+  m_Layer: 0
+  m_Name: Team 2 Logo In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921887307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921887306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1921887308
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921887306}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1350896504}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1350896504}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1950633804
 GameObject:
   m_ObjectHideFlags: 0
@@ -7599,3 +8693,54 @@ Transform:
   m_Father: {fileID: 1846317246}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2087840648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2087840649}
+  - component: {fileID: 2087840650}
+  m_Layer: 0
+  m_Name: Team 1 Logo In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2087840649
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087840648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 945458791}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &2087840650
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087840648}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 7de24692514b84a4389edaa115826249, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114664496240393720, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 162364113}
+  - key: {fileID: 114870943957288302, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 1048007531}
+  - key: {fileID: 114924103200716452, guid: 7de24692514b84a4389edaa115826249, type: 2}
+    value: {fileID: 162364113}
+  m_ExposedReferences:
+    m_References: []
