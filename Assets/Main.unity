@@ -5547,10 +5547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f409739077911c4d9788f5db2d6b9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineCount: 2000
-  _speed: 50
+  _lineCount: 3000
+  _speed: 75
   _speedRandomness: 0.589
-  _length: 4
+  _length: 2
   _lengthRandomness: 0.465
   _extent: {x: 15, y: 15, z: 15}
   _color: {r: 1, g: 1, b: 1, a: 1}

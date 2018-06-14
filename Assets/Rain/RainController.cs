@@ -65,7 +65,7 @@ namespace Cortina
 
             // Apply the input to the renderer properties.
             _renderer.LineCount = (int)(_originalCount * Mathf.Clamp01(force * 10));
-            _renderer.Length = _originalLength * (1 + 2 * Mathf.Clamp01(force * 10 - 2));
+            _renderer.Length = _originalLength * (1 + 1 * Mathf.Clamp01(force * 10 - 2));
         }
 
         #endregion
