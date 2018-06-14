@@ -161,6 +161,8 @@ PlayableDirector:
     value: {fileID: 1078459011}
   - key: {fileID: 114175273627224044, guid: 85747c43733e7644fa44bbf08ef20139, type: 2}
     value: {fileID: 317628910}
+  - key: {fileID: 114474231334596966, guid: 85747c43733e7644fa44bbf08ef20139, type: 2}
+    value: {fileID: 193752432}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &51252135
@@ -667,6 +669,66 @@ PlayableDirector:
     value: {fileID: 1881461020}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &193752432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 193752433}
+  - component: {fileID: 193752434}
+  - component: {fileID: 193752435}
+  m_Layer: 0
+  m_Name: Fog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193752433
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193752432}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1001033555}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193752434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193752432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099211d58327e044892507bc02a7239a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _density: 0
+--- !u!95 &193752435
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193752432}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &239266658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,6 +6716,7 @@ Transform:
   - {fileID: 1371418219}
   - {fileID: 1750560199}
   - {fileID: 945458791}
+  - {fileID: 193752433}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7448,6 +7511,8 @@ PlayableDirector:
     value: {fileID: 1078459011}
   - key: {fileID: 114625522195639038, guid: 8ea4312acf94b1a4387306ae9fb71db1, type: 2}
     value: {fileID: 317628910}
+  - key: {fileID: 114788764719056558, guid: 8ea4312acf94b1a4387306ae9fb71db1, type: 2}
+    value: {fileID: 193752432}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1288843389
