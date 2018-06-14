@@ -40,7 +40,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -51,63 +51,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: _mode
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.r
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.g
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.b
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
@@ -122,27 +65,6 @@ AnimationClip:
     - serializedVersion: 2
       path: 0
       attribute: 3404674992
-      script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 0
-      attribute: 1998982639
-      script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 0
-      attribute: 452716804
-      script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 0
-      attribute: 1787895179
       script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
       typeID: 114
       customType: 0
@@ -174,7 +96,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -185,63 +107,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: _mode
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.r
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.g
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.6981132
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _color.b
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 23e828d58318b58438fc810fc241aec3, type: 3}
